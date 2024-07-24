@@ -1,3 +1,8 @@
+:root {
+  --zinc-100: #f4f4f5;
+  --zinc-900: #18181b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,16 +15,77 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #18181b;
-  color: #f4f4f5;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--zinc-900);
+  color: var(--zinc-100);
 }
 
 button {
   cursor: pointer;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 70px;
+  border-radius: 8px;
+  background-color: var(--zinc-100);
+  color: var(--zinc-900);
+}
+
+nav ul {
+  display: flex;
+  width: 350px;
+}
+
+nav ul li {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  list-style: none;
+  z-index: 1;
+}
+
+nav ul li a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  color: inherit;
+}
+
+nav ul li a .icon {
+  position: relative;
+  display: block;
+  font-size: 1.5rem;
+  line-height: 75px;
+  text-align: center;
+  transition: 400ms;
+}
+
+nav ul li:hover .icon {
+  transform: translateY(-35px);
+}
+
+nav ul li a .text {
+  position: absolute;
+  opacity: 0;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  transition: 400ms;
+  transform: translateY(20px);
+}
+
+nav ul li:hover .text {
+  opacity: 1;
+  transform: translateY(10px);
 }
