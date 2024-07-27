@@ -71,7 +71,7 @@ nav ul li a .icon {
   transition: 400ms;
 }
 
-nav ul li:hover .icon {
+nav ul li:hover a .icon {
   transform: translateY(-35px);
 }
 
