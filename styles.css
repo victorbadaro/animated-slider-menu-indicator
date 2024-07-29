@@ -1,6 +1,7 @@
 :root {
   --zinc-100: #f4f4f5;
   --zinc-900: #18181b;
+  --purple-900: #4c1d95;
 }
 
 * {
@@ -72,7 +73,7 @@ nav ul li a .icon {
 }
 
 nav ul li.active a .icon {
-  transform: translateY(-35px);
+  transform: translateY(-32px);
 }
 
 nav ul li a .text {
@@ -88,4 +89,39 @@ nav ul li a .text {
 nav ul li.active .text {
   opacity: 1;
   transform: translateY(10px);
+}
+
+.indicator {
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  border: 6px solid var(--zinc-900);
+  border-radius: 50%;
+  background-color: var(--purple-900);
+  transition: 500ms;
+}
+
+.indicator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 20px;
+  height: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -10px 0 0 var(--zinc-900);
+  background-color: transparent;
+}
+
+.indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 20px;
+  height: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 -10px 0 0 var(--zinc-900);
+  background-color: transparent;
 }
